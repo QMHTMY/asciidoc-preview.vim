@@ -1,0 +1,70 @@
+= Asciidoctor Preview for (Neo)vim
+Shieber
+
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+:uri-license: https://github.com/QMHTMY/asciidoc-preview.nvim/blob/master/LICENSE
+:uri-readme-cn: https://github.com/QMHTMY/asciidoc-preview.nvim/blob/master/README_CN.adoc
+
+TIP: This project was inspired by https://github.com/iamcco/markdown-preview.nvim[markdown-preview.nvim].
+
+[NOTE]
+====
+On Firefox, preview window may not close when leave the markdown file in Vim. This is because the Firefox default configuration of `dom.allow_scripts_to_close_windows` is `false`. + 
+Please input `about:config` in address bar and set the value to `true`.
+====
+
+== Compatible OS 
+* Linux 
+* Mac OS
+* Windows
+
+== Description
+[link:README_CN.adoc[中文版]] Preview http://asciidoc.org/[asciidoc] on your modern browser with synchronized scrolling and flexible configuration. Your asciidoc file must end with suffixes like: 
+
+[cols="3", options="header"]
+.Suffixes
+|===
+|1
+|2
+|3
+
+|*.ad*
+|*.asc*
+|*.asd*
+
+|*.ascd*
+|*.adoc*
+|*.asciidoc*  
+|===
+
+== Vim version 
+
+- [*]  Vim >= 8.0    
+- [ ]  https://neovim.io[Neovim]
+
+== Planed main features
+. Multi-platforms (Macos/Linux/Windows)
+. Synchronised scrolling
+. Fast asynchronous updates
+. Emoji
+. Task lists
+. Local images
+. Flexible configuration
+
+== Reference
+* https://github.com/asciidoctor/asciidoctor.js[asciidoctor.js]
+* https://github.com/iamcco/markdown-preview.nvim[markdown-preview.nvim]
+* https://github.com/asciidoctor/asciidoctor-browser-extension[asciidoctor-browser-extension]
+
+== Copyright
+Copyright (C) 2019-2020 Shieber. +
+See the link:LICENSE[LICENSE] file for free use of this script granted under the terms of the Apache License.
