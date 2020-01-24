@@ -14,13 +14,15 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/LICENSE
 :uri-readme-cn: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/README_CN.adoc
 
-
 TIP: This project was inspired by https://github.com/iamcco/markdown-preview.vim[markdown-preview.vim].
-
 [NOTE]
 ====
-On Firefox, preview window may not close when leave the markdown file in Vim. This is because the Firefox default configuration of `dom.allow_scripts_to_close_windows` is `false`. + 
-Please input `about:config` in address bar and set the value to `true`.
+Q: The Firefox preview window didn't close when leaving the Asciidoc file in Vim. + 
+A: If you want the plugin to auto-close the preview window in Firefox, you have to do some configuration:
+
+ 1.Open Firefox.  
+ 2.Type about:config in the address bar and press the Enter key.  
+ 3.Search for dom.allow_scripts_to_close_windows and set its value to true
 ====
 
 == Compatible OS 
@@ -51,14 +53,85 @@ Please input `about:config` in address bar and set the value to `true`.
 
 - [*]  Vim >= 8.0    
 
-== Planed main features
-. Multi-platforms (Macos/Linux/Windows)
+== Main features
+. Local images
+. Multi-platforms
 . Synchronised scrolling
 . Fast asynchronous updates
-. Emoji
-. Task lists
-. Local images
 . Flexible configuration
+
+== Installation
+
+With vumdle: 
+
+Add Plugin `QMHTMY/asciidoc-preview.vim` to the `~/.vimrc` or init.vim file and type `:PlugInstall`. 
+
+ Plugin `QMHTMY/asciidoc-preview.vim`
+
+== Usage
+=== Command 
+ AsciidocPreview  
+ " Open preview window in asciidoc buffer
+
+ AsciidocPreviewStaop  
+ " Close preview window and server 
+
+=== Default Setting:
+
+     let g:asdp_path_to_chrome = ""
+    " Path to the chrome or the command to open chrome (or other modern browsers).
+    " If set, g:asdp_browserfunc would be ignored.
+
+    let g:asdp_browserfunc = 'ASDP_browserfunc_default'
+    " Callback Vim function to open browser, the only parameter is the url to open.
+
+    let g:asdp_auto_start = 0
+    " Set to 1, Vim will open the preview window on entering the Asciidoc
+    " buffer.
+
+    let g:asdp_auto_open = 0
+    " Set to 1, Vim will automatically open the preview window when you edit an
+    " Asciidoc file.
+
+    let g:asdp_auto_close = 1
+    " Set to 1, Vim will automatically close the current preview window when
+    " switching from one Asciidoc buffer to another.
+
+    let g:asdp_refresh_slow = 0
+    " Set to 1, Vim will just refresh Asciidoc when saving the buffer or
+    " leaving from insert mode. With default 0, it will automatically refresh
+    " Asciidoc as you edit or move the cursor.
+
+    let g:asdp_command_for_global = 0
+    " Set to 1, the AsciidocPreview command can be used for all files,
+    " by default it can only be used in Asciidoc files.
+
+    let g:asdp_open_to_the_world = 0
+    " Set to 1, the preview server will be available to others in your network.
+    " By default, the server only listens on localhost (127.0.0.1).
+
+=== Mapping:
+By default this plugin has no mapping: if you want to have your own mappings, you can map the keys to  + 
+`<Plug>AsciidocPreview` for opening the Asciidoc preview window and map keys to
+`<Plug>StopAsciidocPreview`  +  
+for closing the preview window.
+  
+Examples for mapping the F8 key to open Asciidoc preview window and F9 key to close preview window:
+
+  " for normal mode
+  nmap <silent> <F8> <Plug>AsciidocPreview
+  " for insert mode
+  imap <silent> <F8> <Plug>AsciidocPreview
+  " for normal mode
+  nmap <silent> <F9> <Plug>StopAsciidocPreview
+  " for insert mode
+  imap <silent> <F9> <Plug>StopAsciidocPreview
+
+For OS X users, you can set the g:asdp_path_to_chrome as below (if you use Chrome):
+
+  let g:asdp_path_to_chrome = "open -a Google\\ Chrome"
+  " or
+  let g:asdp_path_to_chrome = "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 
 == Reference
 * https://github.com/asciidoctor/asciidoctor.js[asciidoctor.js]
@@ -68,4 +141,3 @@ Please input `about:config` in address bar and set the value to `true`.
 == Copyright
 Copyright (C) 2019-2020 Shieber. +
 See the link:LICENSE[LICENSE] file for free use of this script granted under the terms of the Apache License.
-
