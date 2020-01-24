@@ -14,7 +14,6 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/LICENSE
 :uri-readme-cn: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/README_CN.adoc
 
-[link:README_CN.adoc[中文版]] 
 
 TIP: This project was inspired by https://github.com/iamcco/markdown-preview.vim[markdown-preview.vim].
 
@@ -30,7 +29,7 @@ Please input `about:config` in address bar and set the value to `true`.
 * Windows
 
 == Description
-Preview http://asciidoc.org/[asciidoc] on your modern browser with synchronized scrolling and flexible configuration. Your asciidoc file must end with suffixes like: 
+[link:README_CN.adoc[中文版]] Preview http://asciidoc.org/[asciidoc] on your modern browser with synchronized scrolling and flexible configuration. Your asciidoc file must end with suffixes like: 
 
 [cols="3", options="header"]
 .Suffixes
