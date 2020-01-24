@@ -15,7 +15,6 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/LICENSE
 :uri-readme: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/README.adoc
 
-[link:README.adoc[English]] 
 
 TIP: 本项目受到makdown项目 https://github.com/iamcco/markdown-preview.vim[markdown-preview.vim]的启发。
 
@@ -31,7 +30,7 @@ TIP: 本项目受到makdown项目 https://github.com/iamcco/markdown-preview.vim
 * Windows
 
 == 描述
-vim打开 http://asciidoc.org/[asciidoc]文件时直接在系统默认浏览器上预览，asciidoc文件名必须以下列后缀结尾。
+[link:README.adoc[English]] vim打开 http://asciidoc.org/[asciidoc]文件时直接在系统默认浏览器上预览，asciidoc文件名必须以下列后缀结尾。
 
 [cols="3", options="header"]
 .后缀
