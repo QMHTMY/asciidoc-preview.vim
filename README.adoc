@@ -14,15 +14,15 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/LICENSE
 :uri-readme-cn: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/README_CN.adoc
 
-TIP: This project was inspired by https://github.com/iamcco/markdown-preview.vim[markdown-preview.vim].
+TIP: This project inspired by https://github.com/iamcco/markdown-preview.vim[markdown-preview.vim].
 [NOTE]
 ====
-Q: The Firefox preview window didn't close when leaving the Asciidoc file in Vim. + 
-A: If you want the plugin to auto-close the preview window in Firefox, you have to do some configuration:
+Q: The Firefox preview window didn't close when leaving the Asciidoc file from Vim. + 
+A: If you want the plugin to auto-close the preview window in Firefox, you have to change configuration:
 
  1.Open Firefox.  
- 2.Type about:config in the address bar and press the Enter key.  
- 3.Search for dom.allow_scripts_to_close_windows and set its value to true
+ 2.Type `about:config` in the address bar and press the Enter key.  
+ 3.Search for `dom.allow_scripts_to_close_windows` and set its value to true.
 ====
 
 == Compatible OS 
@@ -110,7 +110,7 @@ Add Plugin `QMHTMY/asciidoc-preview.vim` to the `~/.vimrc` or init.vim file and 
     " Set to 1, the preview server will be available to others in your network.
     " By default, the server only listens on localhost (127.0.0.1).
 
-=== Mapping:
+=== Mapping
 By default this plugin has no mapping: if you want to have your own mappings, you can map the keys to  + 
 `<Plug>AsciidocPreview` for opening the Asciidoc preview window and map keys to
 `<Plug>StopAsciidocPreview`  +  
