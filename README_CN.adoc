@@ -10,7 +10,7 @@ ifdef::env-github[]
 :note-caption: :paperclip:
 :tip-caption: :bulb:
 :warning-caption: :warning:
-endif::[]
+endef::[]
 
 :uri-license: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/LICENSE
 :uri-readme: https://github.com/QMHTMY/asciidoc-preview.vim/blob/master/README.adoc
